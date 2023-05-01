@@ -8,6 +8,7 @@ module.exports.getAll = (page, perPage) => {
   return Author.find().limit(perPage).skip(perPage*page).lean();
 }
 
+
 module.exports.getById = (authorId) => {
   if (!mongoose.Types.ObjectId.isValid(authorId)) {
     return null;
